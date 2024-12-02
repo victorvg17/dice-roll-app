@@ -1,0 +1,20 @@
+<!-- <p>dice-roll works!</p> -->
+<div class="dice-roll-container">
+  <h1 class="heading">Toy Project 1</h1>
+  <h3 class="subheading">Dice Rolling App using Angular</h3>
+
+  <div class="dice-wrapper">
+    <fa-icon
+      [icon]="currentFace"
+      class="dice-icon"
+      [ngClass]="{ rolling: isRolling }"
+    >
+    </fa-icon>
+  </div>
+
+  <button (click)="rollDice()" [disabled]="isRolling" class="roll-button">
+    Roll Dice
+  </button>
+
+  <div *ngIf="result" class="result">{{ result }}</div>
+</div>
